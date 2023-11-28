@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: rgb(0, 17, 255);
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+header li {
+    display: inline;
+    margin-left: 1em;
+}
+
+header li a, header h1 {
+    color: white;
+    text-decoration: none;
+}
+
+header h1, li {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.sobreloja img {
+    max-width: 25em;
+    display: flex; /* Torna o contêiner um flex container */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.sobreloja {
+    display: flex;
+    align-items: center;
+}
+
+.sobreloja img {
+    margin-right: 20px; /* Ajuste conforme necessário */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+}
+
+.Produtos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Adiciona espaço entre cada item */
+}
+
+.Produtos li img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+}
