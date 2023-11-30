@@ -5,55 +5,78 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    background-color: rgb(0, 17, 255);
-    color: antiquewhite;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
     margin-bottom: 1em;
+    padding: 0.3em 0;
+    border-bottom: 0.5em;
+    background-color: rgb(65, 76, 240);
+}
+
+header h1, a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+header h1 {
+    font-style: italic;
+    font-size: 2em;
+}
+
+header .cabecalho {
+    display: flex; /*display flexivel*/
+    justify-content: space-between; /*alinhando extremo esquerdo*/
+    align-items: center; /*alinhando na orizontal*/
 }
 
 header li {
-    display: inline;
-    margin-left: 1em;
+    float: left;
+    list-style: none;
+    padding: 1em;
 }
 
-header li a, header h1 {
-    color: white;
-    text-decoration: none;
+.loja {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-header h1, li {
-    margin-left: 2em;
-    margin-right: 2em;
+main img, aside {
+    max-width: 95%;
+    margin: 2em 0;
 }
 
-.sobreloja img {
-    max-width: 25em;
-    display: flex; /* Torna o contêiner um flex container */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+.conteudo h1 {
+    font-style: italic;
+    color: rgb(65, 76, 240);
+    font-size: 1.5em;
+    border-bottom: 0.1em solid rgb(65, 76, 240); /* Adiciona uma linha azul na parte inferior do parágrafo */
+    padding-bottom: 1em; /* Adiciona espaço entre a linha e o texto */
+    margin-bottom: 2em; /* Adiciona espaço adicional entre o parágrafo e o título */
+
 }
 
-.sobreloja {
+.container-produtos {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.sobreloja img {
-    margin-right: 20px; /* Ajuste conforme necessário */
-    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+.container-produtos li {
+    list-style: none;
 }
 
-.Produtos li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px; /* Adiciona espaço entre cada item */
+.container-produtos li, .container-produtos img {
+    max-width: 100%;
+    width: 12em;
 }
 
-.Produtos li img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+.container-produtos h2 {
+    margin-bottom: 2em;
+    font-size: 0.8em;
 }
