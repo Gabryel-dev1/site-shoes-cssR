@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: rgb(207, 236, 236);
+}
+
 .container {
     max-width: 1024px;
     width: 100%;
@@ -12,13 +16,14 @@
 }
 
 header {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 0.3em 0;
     border-bottom: 0.5em;
     background-color: rgb(65, 76, 240);
 }
 
-header h1, a{
+header h1,
+a {
     color: white;
     text-decoration: none;
     font-size: 1.4em;
@@ -30,9 +35,12 @@ header h1 {
 }
 
 header .cabecalho {
-    display: flex; /*display flexivel*/
-    justify-content: space-between; /*alinhando extremo esquerdo*/
-    align-items: center; /*alinhando na orizontal*/
+    display: flex;
+    /*display flexivel*/
+    justify-content: space-between;
+    /*alinhando extremo esquerdo*/
+    align-items: center;
+    /*alinhando na orizontal*/
 }
 
 header li {
@@ -41,42 +49,162 @@ header li {
     padding: 1em;
 }
 
-.loja {
+#loja {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
+    margin-bottom: 2em;
 }
 
-main img, aside {
-    max-width: 95%;
-    margin: 2em 0;
+main img,
+aside {
+    max-width: 100%;
+}
+
+aside {
+    margin-left: 2em;
 }
 
 .conteudo h1 {
     font-style: italic;
     color: rgb(65, 76, 240);
     font-size: 1.5em;
-    border-bottom: 0.1em solid rgb(65, 76, 240); /* Adiciona uma linha azul na parte inferior do parágrafo */
-    padding-bottom: 1em; /* Adiciona espaço entre a linha e o texto */
-    margin-bottom: 2em; /* Adiciona espaço adicional entre o parágrafo e o título */
-
-}
-
-.container-produtos {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.container-produtos li {
-    list-style: none;
-}
-
-.container-produtos li, .container-produtos img {
-    max-width: 100%;
-    width: 12em;
-}
-
-.container-produtos h2 {
+    border-bottom: 0.1em solid rgb(65, 76, 240);
+    padding-bottom: 1em;
     margin-bottom: 2em;
-    font-size: 0.8em;
+}
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    column-gap: 4%;
+    row-gap: 5%;
+    margin-bottom: 40px;
+}
+
+#produtos article {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#produtos img {
+    max-width: 100%;
+}
+
+#produtos h2 {
+    font-size: 20px;
+    width: 100%;
+    margin-top: 12px;
+    align-self: start;
+}
+
+#produtos p {
+    font-size: 15px;
+    width: 100%;
+    margin-top: 12px;
+    align-self: start;
+}
+
+
+#produtos button {
+    width: 100%;
+    background-color: rgb(65, 76, 240);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    align-self: end;
+    margin: 15px 0 15px;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header li {
+        float: left;
+        list-style: none;
+        padding: 0.3em;
+        font-size: 0.8em;
+    }
+
+    #menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #loja {
+        display: block;
+        margin: 0;
+    }
+
+    aside {
+        margin-left: 0;
+    }
+
+    .conteudo h1 {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    #produtos {
+        display: block;
+        margin-bottom: 5em;
+    }
+
+    #produtos img {
+        width: 100%;
+    }
+
+    #produtos article {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 1em;
+    }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #loja {
+        display: block;
+        margin: 0;
+    }
+
+    #loja img {
+        width: 100%;
+    }
+
+    aside {
+        margin-left: 0;
+    }
+
+    .conteudo h1 {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    #produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 46%);
+        column-gap: 4%;
+        row-gap: 4%;
+        margin-bottom: 5em;
+        justify-content: center;
+    }
+
+    #produtos img {
+        width: 100%;
+    }
+
 }
